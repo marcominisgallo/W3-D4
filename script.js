@@ -32,7 +32,14 @@ const extract = function (e) {
 
   for (i = 0; i < tombolaNumbers; i++) {
     if (parseInt(cell[i].innerText) === randomNumber) {
-      cell[i].parentElement.classList.add(".extractedNumber");
+      cell[i].parentElement.classList.add("extractedNumber");
+    }
+  }
+
+  const extractedNumber = querySelectorAll("div.cell.extractedNumber h3");
+  for (i = 0; i < extractedNumber.length; i++) {
+    if (randomNumber === extractedNumber[i].innerText) {
+      randomNumber();
     }
   }
 };
