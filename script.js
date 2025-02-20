@@ -25,21 +25,22 @@ console.log(allCellsValue);
 oneCellValue(tombolaNumbers);
 
 const extract = function (e) {
-  e.preventDefault();
-
   const randomNumber = Math.floor(Math.random() * 90) + 1;
   const cell = document.querySelectorAll("div.cell h3");
 
-  for (i = 0; i < tombolaNumbers; i++) {
-    if (parseInt(cell[i].innerText) === randomNumber) {
-      cell[i].parentElement.classList.add("extractedNumber");
+  const extractedNumber = document.querySelectorAll(
+    "div.cell.extractedNumber h3"
+  );
+  console.log(extractedNumber);
+  for (let i = 0; i < extractedNumber.length; i++) {
+    if (randomNumber === parseInt(extractedNumber[i].innerText)) {
+      extract();
+      console.log("dentro if");
     }
   }
-
-  const extractedNumber = querySelectorAll("div.cell.extractedNumber h3");
-  for (i = 0; i < extractedNumber.length; i++) {
-    if (randomNumber === extractedNumber[i].innerText) {
-      randomNumber();
+  for (let i = 0; i < tombolaNumbers; i++) {
+    if (parseInt(cell[i].innerText) === randomNumber) {
+      cell[i].parentElement.classList.add("extractedNumber");
     }
   }
 };
