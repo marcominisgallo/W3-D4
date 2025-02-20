@@ -43,4 +43,7 @@ const extract = function (e) {
       cell[i].parentElement.classList.add("extractedNumber");
     }
   }
+
+  let lastNumber = document.querySelector("footer p");
+  lastNumber.innerText = "ultimo numero estratto: " + randomNumber;
 };

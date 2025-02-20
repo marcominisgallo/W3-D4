@@ -32,7 +32,7 @@ div button {
 
 .cell {
     display: inline-block;
-    width: 12%;
+    width: 10%;
     max-height: 4em;
     border-radius: 8px;
     cursor: pointer;
